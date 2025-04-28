@@ -1,0 +1,34 @@
+version: 4.2.29
+session: 680fe4f4831a052014f01af1
+steps:
+  - prompt: Click on the "Search" icon in the header.
+    commands:
+      - command: hover-image
+        description: magnifying glass icon next to the search bar in the header
+        action: click
+  - prompt: Click on the "Search" icon in the header.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-image
+        description: magnifying glass icon next to the search bar in the YouTube header
+        action: click
+  - prompt: Enter a search term in the search bar.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Search
+        description: search bar in the YouTube header
+        action: click
+      - command: type
+        text: monster trucks
+  - prompt: Press enter to initiate the search.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert search results are displayed and relevant.
+    commands:
+      - command: assert
+        expect: search results for "monster trucks" are displayed
