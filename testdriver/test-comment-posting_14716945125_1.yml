@@ -1,0 +1,17 @@
+version: 4.2.29
+session: 680fe4f8831a052014f01af5
+steps:
+  - prompt: Scroll down to the comments section.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 600
+  - prompt: Enter a comment in the input box.
+    commands:
+      - command: hover-text
+        text: Add a comment...
+        description: comment input field below the video
+        action: click
+      - command: type
+        text: This is a test comment.
