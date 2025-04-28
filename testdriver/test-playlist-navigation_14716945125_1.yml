@@ -1,0 +1,19 @@
+version: 4.2.29
+session: 680fe4c9831a052014f01ade
+steps:
+  - prompt: Click on a video in the playlist on the right sidebar.
+    commands:
+      - command: hover-text
+        text: Moonlight on the River
+        description: video title in the playlist on the right sidebar
+        action: click
+  - prompt: Assert the selected video starts playing.
+    commands: []
+  - prompt: Click another video in the playlist.
+    commands:
+      - command: hover-text
+        text: Me and the Birds
+        description: video title in the playlist on the right sidebar
+        action: click
+  - prompt: Assert the next video starts playing.
+    commands: []
