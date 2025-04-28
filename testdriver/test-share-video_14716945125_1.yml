@@ -1,0 +1,25 @@
+version: 4.2.29
+session: 680fe4ba0e064b4273992088
+steps:
+  - prompt: Click the "Share" button below the video.
+    commands:
+      - command: hover-text
+        text: Share
+        description: share button below the video
+        action: click
+  - prompt: Assert the share options are displayed.
+    commands:
+      - command: assert
+        expect: the share options are displayed
+  - prompt: Copy the share link.
+    commands:
+      - command: hover-text
+        text: Copy
+        description: copy button next to the share link
+        action: click
+  - prompt: Copy the share link.
+    commands:
+      - command: hover-text
+        text: Copy
+        description: copy button next to the share link
+        action: click
